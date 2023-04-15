@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="processa_form.php" method="post">
+
+        <fieldset>
+            <legend>Dados Gerais</legend>
+
+            <label for="nome">Nome:</label>
+            <input type="text" minlength="3" id="nome" name="nome" required />
+
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="text" name="data_nascimento" id="data_nascimento" />
+
+            <label for="cpf">CPF:</label>
+            <input type="text" maxlength="11" minlength="11" id="cpf" name="cpf" pattern="[0-9]{11}" required />
+
+
+            <label for="tel">Tel. Celular:</label>
+            <input type="text" minlength="11" maxlength="11" id="tel" name="tel" placeholder="21-99999-9999"
+                pattern="[0-9]{11}" required />
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Endereço</legend>
+
+            <label for="tipo_endereço">Tipo:</label>
+            <select id="tipo_endereço" name="tipo_endereço">
+                <option value="">Selecione</option>
+                <option value="rua">Rua</option>
+                <option value="estrada">Estrada</option>
+                <option value="rodovia">Rodovia</option>
+                <option value="outro">Outro</option>
+            </select>
+
+            <label for="logradouro_enderço">Logradouro</label>
+            <input type="text" id="logradouro_enderço" name="logradouro_enderço" />
+
+            <label for="numero_endereço">Nº</label>
+            <input type="text" id="numero_endereço" name="numero_endereço" />
+
+            <label for="complemento_endeeço">Complemento</label>
+            <input type="complemento_endereço" id="complemento_endereço" name="complemento_endereço" />
+        </fieldset>
+
+        <fieldset>
+            <legend>Fale Conosco</legend>
+
+            <p>
+                <label for="sugestao">Tipo de Mensagem</label>
+                <input type="radio" id="sugestao" name="tipo_msg" value="sugestão">Sugestão
+                <input type="radio" id="critica" name="tipo_msg" value="Crítica">Crítica
+                <input type="radio" id="elogio" name="tipo_msg" value="Elogio">Elogio
+            </p>
+
+            <p>
+                <label for="msg">Mensagem:</label><br>
+                <textarea name="msg" id="msg" cols="30" rows="5"></textarea>
+            </p>
+        </fieldset>
+
+
+        <fieldset>
+
+            <button tipe="submit">Enviar sua mensagem</button>
+            <button type="reset">Limpar o Formulário</button>
+        </fieldset>
+
+
+    </form>
+</body>
+
+</html>
